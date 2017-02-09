@@ -6,6 +6,7 @@ You need:
 * avr-libc
 * avr-binutils
 * avrdude
+
 Go in the root directory of the repo, build and flash:
 ```bash
 git clone https://github.com/plushvoxel/HSB-Wave.git
