@@ -1,3 +1,15 @@
+/*
+HSB Wave
+Firmware
+for use with ATtiny25
+AS220
+Mitch Altman
+marble
+09-Feb-17 -- HSB instead of RBG
+
+Distributed under Creative Commons 3.0 -- Attib & Share Alike
+*/
+
 #include <stdint.h>
 #include <stdlib.h>
 #include "color.h"
@@ -33,7 +45,7 @@ start > stop | stop <- start    | -> stop ... start ->
 uint16_t inter_hue(uint16_t start_val, uint16_t stop_val, uint16_t step_max, uint16_t step_cur) {
   int32_t result;
   uint32_t dist = abs(stop_val - start_val);
-  
+
   if((start_val <= stop_val)) {
     if((dist <= HUE_MAX/2)){
       /* go forward from start to stop
