@@ -1,17 +1,29 @@
+/*
+HSB Wave
+Firmware
+for use with ATtiny25
+AS220
+Mitch Altman
+marble
+09-Feb-17 -- HSB instead of RBG
+
+Distributed under Creative Commons 3.0 -- Attib & Share Alike
+*/
+
+/* I wrote this for Sofi */
+
 #include <avr/io.h>             // this contains all the IO port definitions
 #include <avr/interrupt.h>      // definitions for interrupts
-#include <avr/sleep.h>          // definitions for power-down modes
-#include <avr/pgmspace.h>       // definitions or keeping constants in program memory
 #include <stdint.h>
 #include "color.h"
 #include "pinman.h"
 
 #define ITE_MIN (1)
 #define ITE_STEP (1)
-#define ITE_MAX (10)
-#define HUE_STEP (4)
-#define SAT (100)
-#define VAL (50)
+#define ITE_MAX (40)
+#define HUE_STEP (5)
+#define SAT (90)
+#define VAL (10)
 
 #ifndef COL_REG
 #define COL_REG B
@@ -153,5 +165,6 @@ int main(void) {
     ite += ITE_STEP;
     if(ite > ITE_MAX) { ite = ITE_MAX; }
   }
+  /* catch all */
   while(1);
 }

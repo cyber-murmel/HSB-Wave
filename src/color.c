@@ -1,15 +1,3 @@
-/*
-HSB Wave
-Firmware
-for use with ATtiny25
-AS220
-Mitch Altman
-marble
-09-Feb-17 -- HSB instead of RBG
-
-Distributed under Creative Commons 3.0 -- Attib & Share Alike
-*/
-
 #include <stdint.h>
 #include <stdlib.h>
 #include "color.h"
