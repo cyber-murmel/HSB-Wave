@@ -19,8 +19,8 @@ Distributed under Creative Commons 3.0 -- Attib & Share Alike
 #include "pinman.h"
 
 #define ITE_MIN (1)
-#define ITE_STEP (1)
-#define ITE_MAX (40)
+#define ITE_STEP (4)
+#define ITE_MAX (50)
 #define HUE_STEP (5)
 #define SAT (90)
 #define VAL (10)
